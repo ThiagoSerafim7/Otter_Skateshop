@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ysabeau', sans-serif;
+    }
+    
+body {
+    background-color: white;
+}
+/****Navbar***/
+#frete {
+    background-color: #961322;
+    text-align: center;
+    width: 100%;
+    height: 2%;
+    color: #ffff;
+}
+header {
+    width: 100%;
+    justify-content:center;
+    background-color: #fff;
+}
+header a  {
+    text-align: center;
+} 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 40%;
+    min-width: 150px;
+    height: auto;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    background: #961322;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 100%;
+    height: 3vw;
+    align-items: center;
+    font-size: larger;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    width: 30%;
+}
+li {
+    list-style: none;
+}
+.nav-bar {
+    background: #961322;
+    min-height: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.nav-bar a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.nav-link {
+    transition: 0.5s ease;
+}
+.nav-link:hover {
+    color: gainsboro;
+}
+.navb {
+    padding: 0 10px;
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    margin: 5px auto;
+    background-color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+}
+ 
+@media screen and (max-width: 780px) {
+    .navb {
+        display: block;
+    }
+    .navb.active .bar:nth-child(1){
+        opacity: 0;
+    }
+    .navb.active .bar:nth-child(2) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+    .navb.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg)
+    }
+    .nav-menu {
+        position:absolute;
+        left: -100%;
+        gap: 0;
+        top: 0%;
+        background-color: whitesmoke;
+        text-align: center;
+        flex-direction: column;
+        width: 40%;
+        height:100%;
+        transition: 0.3s;
+        z-index: 2;
+    }
+    .nav-item{
+        margin: 5px;
+    }
+    .nav-menu.active {
+        left: 0;
+        height: 100%;
+    }
+    a.nav-link {
+        color: #961322;
+        font-size: medium;
+    }
+}
+/****Passador de slides****/
+#slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 1%;
+  }
+  #slider-mask {
+    width: 100%;
+    height: 45vw;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  #slider-content {
+    display: flex;
+    width: 300%;
+  }
+  #slider-mask div {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  #left-arrow,
+  #right-arrow {
+    top: 50%;  
+    width: 4vw;
+    min-width: 40px;
+    height: 4vw;
+    min-height: 40px;
+    background-color: #11111100;
+    border: 0;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+    z-index: 1;
+  } 
+  #left-arrow img,
+  #right-arrow img {
+    width: 100%;
+    height: 100%;
+  }
+  #left-arrow {
+    position: absolute;
+    left: 2%;
+  }
+  #right-arrow {
+    position: absolute;
+    right: 2%;
+  }
+  #right-arrow img {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+  }
+ img {
+    width: 100%;
+    height: 100%;
+  }
+/**Footer**/
+.conteudos {
+    width: 100;
+    height: 50%;
+    justify-content: space-around;
+    display: flex;
+    background-color: whitesmoke;
+    font-size: smaller;
+}
+.conteudo {
+    background-color: whitesmoke;
+    padding: 1.5%;
+    width: 30%;
+    text-align: center;
+    color: rgba(62, 68, 74);
+}
+.conteudo ul li a {
+    color: rgb(62, 68, 74);
+}
+footer #sobre {
+    background: whitesmoke;
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    color: rgba(62, 68, 74);
+    font-size:larger;
+    padding-top: 0.6%;
+}
+main img {
+    width: 50%;
+    height: 80%;
+    margin: 5%;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+main #description {
+    align-items: center;
+    margin: 5%;
+    width: 100%;
+}
+#form   {
+    color: #961322;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    margin: auto;
+    width: 100%;
+    height: 25%;
+    margin-top: 1%;
+    }
+
+#form > h1  {
+    text-align: center;
+    font-size: 20px;
+    width: 60%;
+    }
+
+#form > form    {
+    display: flex;
+    width: 100%;
+    }
+
+.formCont   {
+    background-color: white;
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    }
+
+.inputContainer {
+    width: 25%;
+    margin-left: 5%;
+    position: relative;
+   border: 0.1rem solid gainsboro;
+    }
+#btnSubmit  {
+    color: #ffffff;
+    font-size: 100%;
+    background-color: #961322;
+    }
+.redesocial {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background:whitesmoke;
+    padding-top: 1%;
+}    
+.redesocial img {
+   width: 5%;
+   height: 5%;
+}
+@media screen and (max-width: 760px) {
+    .conteudos {
+        flex-direction: column;
+        align-items: center;
+    }
+    #form {
+        flex-direction: column;
+        
+    }
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputContainer {
+        margin: 2%;
+        width: 50%;
+    }
+    .conteudo {
+        white-space: nowrap;
+    }
+    #sobre {
+        white-space: wrap;
+    }
+    #slider-mask {
+        margin: 2% 0;
+    }
+    main {
+        flex-direction: column;
+        padding-right: 10%;
+    }
+    main img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .inputContainer {
+        margin: 2%;
+        width: 90%;
+    } 
+}
